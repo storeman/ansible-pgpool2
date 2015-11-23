@@ -1,0 +1,6 @@
+---
+interface: eth1
+postgres_users: {}
+pgpool_wd_port: 9898
+pgpool_wd_authkey: 'df0923kdf'
+pgpool_heartbeat_port: 9000

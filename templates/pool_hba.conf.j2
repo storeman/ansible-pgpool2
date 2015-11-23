@@ -1,0 +1,6 @@
+# TYPE  DATABASE        USER            ADDRESS                 METHOD
+host    all             all          127.0.0.1/24  md5
+{% for connection in postgresql_pg_hba_default %}
+# {{connection.comment}}
+{{connection.type}}  {{connection.database}}  {{connection.user}}  {{connection.address}}  {{connection.method}}
+{% endfor %}

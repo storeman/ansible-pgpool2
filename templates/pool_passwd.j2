@@ -1,0 +1,8 @@
+pgpool:md5c06da7894dec8ac8075deca3fe15c5c5
+{% for user in postgresql_users %}
+{% if user.encrypted|bool %}
+{{ user.name }}:{{ user.pass }}
+{% else %}
+{{ user.name }}:md5{{ user.pass|hash('md5') }}
+{% endif %}
+{% endfor %}
